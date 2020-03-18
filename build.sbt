@@ -76,12 +76,4 @@ pomExtra in ThisBuild := <scm>
 
 publishArtifact in Test := false
 
-publishTo in ThisBuild := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
-
-releasePublishArtifactsAction := com.typesafe.sbt.pgp.PgpKeys.publishSigned.value
+publishTo := Some("S3 Artifacts" at "s3://homebay-artifacts/ext-releases-local")

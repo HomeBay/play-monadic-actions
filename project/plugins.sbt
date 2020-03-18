@@ -1,12 +1,14 @@
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.0")
+addSbtPlugin("com.frugalmechanic" % "fm-sbt-s3-resolver" % "0.19.0")
 
-addSbtPlugin("org.scoverage" % "sbt-coveralls" % "1.1.0")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
 
-addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC6")
+addSbtPlugin("org.scoverage" % "sbt-coveralls" % "1.2.7")
 
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.2.6")
+//addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC6")
 
-addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.4")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.2")
 
-addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.0.0")
+addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.13")
+
+addSbtPlugin("com.jsuereth" % "sbt-pgp" % "2.0.0")
 
