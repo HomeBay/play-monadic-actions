@@ -44,7 +44,9 @@ def scalazCompatModule(id: String, moduleName: String, scalazVersion: String) = 
 
 lazy val core = (project in file("core"))
   .settings(commonSettings:_*)
-  .settings(name := "play-monadic-actions")
+  .settings(name := "play-monadic-actions",
+            publishTo := Some("S3 Artifacts" at "s3://homebay-artifacts/ext-releases-local")
+)
 
 lazy val scalaz72 = scalazCompatModule(id = "scalaz72", moduleName = "play-monadic-actions-scalaz_7.2", scalazVersion = "7.2.28")
 
@@ -57,8 +59,6 @@ lazy val cats = (project in file("cats"))
     )
   )
   .dependsOn(core % "compile->compile;test->test")
-
-
 
 publishMavenStyle in ThisBuild := true
 
